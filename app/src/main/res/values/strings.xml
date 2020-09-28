@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MicTxn</string>
+    <string name="categories">Categories</string>
+    <string name="accounts">Accounts</string>
+    <string name="transactions">Transactions</string>
+
+    <string name="placeholder">PLACEHOLDER</string>
+
+    <string name="categoriesTitle">CATEGORIES</string>
+    <string name="accountsTitle">ACCOUNTS</string>
+    <string name="transactionsTitle">TRANSACTIONS</string>
+    <string name="add_an_account">add an account</string>
+    <string name="add_a_category">add a category</string>
+    <string name="add_a_transaction">add a transaction</string>
+    <string name="make_a_search">make a search</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

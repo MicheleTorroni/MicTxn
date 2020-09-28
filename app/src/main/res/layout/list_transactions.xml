@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/single_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="@color/colorPrimary">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.050890584" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/expandableView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_b_dark"
+        android:orientation="vertical"
+        android:paddingBottom="1dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/mainCardLayout">
+
+        <TextView
+            android:id="@+id/transactionAccountTextView"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:paddingStart="8dp"
+            android:text="Account"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/logo_account"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/transactionCategoryTextView"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:gravity="right"
+            android:paddingEnd="8dp"
+            android:text="Category"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/logo_category"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/logo_account"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_accounts_24dp" />
+
+        <ImageView
+            android:id="@+id/logo_category"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_categories_24dp" />
+
+        <TextView
+            android:id="@+id/transactionsPlaceTextView"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:paddingStart="8dp"
+            android:text="Location"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/logo_location"
+            app:layout_constraintTop_toBottomOf="@+id/transactionAccountTextView" />
+
+        <ImageView
+            android:id="@+id/logo_location"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_account"
+            app:srcCompat="@drawable/placeholder_location_24dp" />
+
+        <TextView
+            android:id="@+id/transactionsDateTextView"
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:paddingEnd="8dp"
+            android:text="15/04/1998"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@+id/logo_date"
+            app:layout_constraintTop_toBottomOf="@+id/transactionCategoryTextView" />
+
+        <ImageView
+            android:id="@+id/logo_date"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_category"
+            app:srcCompat="@drawable/placeholder_date_24dp" />
+
+        <ImageView
+            android:id="@+id/arrow_up"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_top_24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainCardLayout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:padding="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/transactionTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="9dp"
+            android:gravity="center"
+            android:padding="2dp"
+            android:shadowColor="@color/orange_shadow"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="Titolo Transazione"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/transactionsBalanceTextView"
+            app:layout_constraintStart_toEndOf="@+id/transactionsImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/transactionsBalanceTextView"
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:gravity="center|right"
+            android:text="57.64"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="15dp"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:text="€"
+            android:textColor="@color/white"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/transactionsImage"
+            android:layout_width="27dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            android:contentDescription="image of the transaction"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <ImageView
+            android:id="@+id/rounded_frame"
+            android:layout_width="27dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_frame" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

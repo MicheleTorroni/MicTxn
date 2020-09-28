@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.050890584" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ImageView
+        android:id="@+id/categoryIcon"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:background="@drawable/rounded_l"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/placeholder_24dp" />
+
+    <TextView
+        android:id="@+id/categoryNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:shadowColor="@color/orange_shadow"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:text="Category name"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/categoryBalanceTextView"
+        app:layout_constraintStart_toEndOf="@+id/categoryIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/categoryBalanceTextView"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center|end"
+        android:text="100000.00"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/EURO"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/EURO"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_r"
+        android:gravity="center"
+        android:text="€"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

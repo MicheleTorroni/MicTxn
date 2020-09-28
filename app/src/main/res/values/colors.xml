@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#455A64</color>
+    <color name="colorPrimaryDark">#1C313A</color>
+    <color name="colorAccent">#FF8761</color>
+    <!--my colors-->
+    <!-- used -->
+    <color name="orange_shadow">#c63f17</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFF</color>
+    <color name="lightGray">#CDCDCD</color>
+    <color name="transparent">#00FFFFFF</color>
+    <!-- unused -->
+    <color name="orange_light">#FF6E00</color>
+    <color name="gray_blue">#616E7D</color>
+    <!--old colors-->
+    <color name="oldColorPrimary">#6200EE</color>
+    <color name="oldColorPrimaryDark">#3700B3</color>
+    <color name="oldColorAccent">#03DAC5</color>
+</resources>

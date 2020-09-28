@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".transactions.Fragment_Transactions">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="60dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="50dp" />
+
+    <ImageButton
+        android:id="@+id/imageButtonTransactionsAdd"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_tl"
+        android:src="@drawable/ic_transactions_add_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/add_a_transaction" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+
+    <ImageButton
+        android:id="@+id/floatingActionButtonSearch"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_bl"
+        android:src="@drawable/placeholder_search_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/make_a_search" />
+
+    <TextView
+        android:id="@+id/titleTransactions"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="@string/transactionsTitle"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="italic|bold"
+        android:shadowColor="@color/colorAccent"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1.5"
+        android:gravity="center"
+        android:background="@drawable/rounded_br"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    -->
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline10">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_transactions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_transactions" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_br"
+        android:ems="10"
+        android:hint="search"
+        android:inputType="textPersonName"
+        android:paddingStart="5dp"
+        android:maxLines="1"
+        android:textColorHint="@color/lightGray"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/tutorial_transaction"
+        layout="@layout/tutorial_transaction"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nestedScrollView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

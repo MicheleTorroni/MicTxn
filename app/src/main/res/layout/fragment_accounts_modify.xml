@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_accounts_modify"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_b_title"
+        android:gravity="center"
+        android:text="Modify an Account"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="italic|bold"
+        android:shadowColor="@color/colorAccent"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/accountNameEditTextModify"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/rounded"
+        android:ems="10"
+        android:gravity="center"
+        android:text="Account's name"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGray"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAccountsSaveModify"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_tl"
+        android:contentDescription="@string/add_an_account"
+        android:src="@drawable/placeholder_modify_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAccountsDelete"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_tr"
+        android:contentDescription="@string/add_an_account"
+        android:src="@drawable/placeholder_delete_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/accountBalanceEditTextModify"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="146dp"
+        android:background="@drawable/rounded_l"
+        android:ems="10"
+        android:gravity="center"
+        android:text="Account's balance"
+        android:inputType="numberDecimal"
+        android:textColor="@color/white"
+        android:textColorHint="@color/lightGray"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="146dp"
+        android:background="@drawable/rounded_r"
+        android:gravity="center"
+        android:text="€"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Spinner
+        android:id="@+id/accountSpinnerModify"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="216dp"
+        android:background="@drawable/rounded_r"
+        android:popupBackground="@color/transparent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/chooseAnIconTextView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="216dp"
+        android:background="@drawable/rounded_l_dark"
+        android:gravity="center"
+        android:shadowColor="@color/colorAccent"
+        android:text="Choose an icon"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/accountSpinnerModify"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="parent" />
+    -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

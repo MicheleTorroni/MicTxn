@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".transactions.Fragment_Transactions_Add">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="50dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_b_title"
+        android:gravity="center"
+        android:text="Add a transaction"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="italic|bold"
+        android:shadowColor="@color/colorAccent"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButtonTransactionSave"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_tl"
+        android:contentDescription="@string/add_an_account"
+        android:src="@drawable/ic_save_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/placeTextInputLayoutTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded"
+                android:hint="Title"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:errorEnabled="true"
+                app:hintTextAppearance="@style/TextLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/transactionTitleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:foregroundTint="#00B9B9B9"
+                    android:gravity="center"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/placeTextInputLayoutBalance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded"
+                android:hint="Amount"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                app:errorEnabled="true"
+                app:hintTextAppearance="@style/TextLabel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/placeTextInputLayoutTitle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/transactionBalanceEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:foregroundTint="#00B9B9B9"
+                    android:gravity="center"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/chooseAnAccountTextView"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_t_dark"
+                android:gravity="center"
+                android:shadowColor="@color/colorAccent"
+                android:text="Choose an Account"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/placeTextInputLayoutBalance" />
+
+            <Spinner
+                android:id="@+id/transactionAccountSpinner"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:popupBackground="@color/transparent"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chooseAnAccountTextView" />
+
+            <TextView
+                android:id="@+id/chooseACategoryTextView"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_t_dark"
+                android:gravity="center"
+                android:shadowColor="@color/colorAccent"
+                android:text="Choose a Category"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/transactionAccountSpinner" />
+
+            <Spinner
+                android:id="@+id/transactionCategorySpinner"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:popupBackground="@color/transparent"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chooseACategoryTextView" />
+
+            <EditText
+                android:id="@+id/transactionPlaceEditText"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Place"
+                android:inputType="textPersonName"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/transactionCategorySpinner" />
+
+            <TextView
+                android:id="@+id/takeAPictureTextView"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:text="Take a picture"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/buttonTakeAPicture"
+                app:layout_constraintStart_toEndOf="@+id/buttonGallery"
+                app:layout_constraintTop_toBottomOf="@+id/transactionPlaceEditText" />
+
+            <ImageButton
+                android:id="@+id/buttonTakeAPicture"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_r"
+                android:src="@drawable/placeholder_camera_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/transactionPlaceEditText" />
+
+            <ImageButton
+                android:id="@+id/buttonGallery"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_l"
+                android:src="@drawable/placeholder_gallery_24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/transactionPlaceEditText" />
+
+            <ImageView
+                android:id="@+id/yourImage"
+                android:layout_width="108dp"
+                android:layout_height="192dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_launcher_foreground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/takeAPictureTextView" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="108dp"
+                android:layout_height="192dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_frame"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/takeAPictureTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
